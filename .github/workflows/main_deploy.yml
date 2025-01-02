@@ -47,9 +47,9 @@ jobs:
       - name: Azure login
         uses: azure/login@v2
         with:
-          client-id: ${{ secrets.CLIENTIDSECRETNAME }}
-          tenant-id: ${{ secrets.TENANTIDSECRETNAME }}
-          subscription-id: ${{ secrets.SUBSCRIPTIONIDSECRETNAME }}
+          client-id: ${{ secrets.__CLIENTIDSECRETNAME__}}
+          tenant-id: ${{ secrets.__TENANTIDSECRETNAME__ }}
+          subscription-id: ${{ secrets.__SUBSCRIPTIONIDSECRETNAME__ }}
 
       - name: Azure CLI script
         uses: azure/cli@v2
