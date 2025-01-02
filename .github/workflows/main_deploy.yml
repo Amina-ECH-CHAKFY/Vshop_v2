@@ -52,9 +52,14 @@ jobs:
       - name: Verify Azure Login
         uses: azure/cli@v2
         with:
-          azcliversion: latest
           inlineScript: |
             az account show
+
+      - name: List Azure Subscriptions
+        uses: azure/cli@v2
+        with:
+          inlineScript: |
+            az account list --output table
 
       - name: Deploy to Azure Web App
         uses: azure/webapps-deploy@v3
